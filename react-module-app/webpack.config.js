@@ -6,24 +6,22 @@ const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
 module.exports = {
   mode: "development",
   entry: "./src/index",
-  output: {
-	path: path.resolve(__dirname, "build"),
-	port: 3001,
+  devServer: {
+    static: path.join(__dirname, 'dist'),
+    port: 3001,
   },
   output: {
-    punlicPath: 'auto',
+    publicPath: 'auto',
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: "/node_modules",
-        use: "babel-loader",
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
         exclude: /node_modules/,
+        options: {
+          presets: ['@babel/preset-react'],
+        },
       },
     ],
   },

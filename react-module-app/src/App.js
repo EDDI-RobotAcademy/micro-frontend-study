@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { mount } from 'vueApp/Sample';
+import { mount } from 'vueModuleApp/Sample';
 
 const App = () => {
   const ref = useRef(null);

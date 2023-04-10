@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "react-module-app"
+      "react-module-app",
+      "vue-module-app"
     ]
   },
   "scripts": {
