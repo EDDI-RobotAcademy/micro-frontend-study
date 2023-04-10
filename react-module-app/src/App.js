@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { mount } from 'vueApp/Sample'
+import React, { useEffect, useRef } from 'react';
+import { mount } from 'vueApp/Sample';
 
 const App = () => {
-  const ref = useRef(null)
+  const ref = useRef(null);
 
   useEffect(() => {
-    mount(ref.current)
-  }, [])
+    mount(ref.current);
+  }, []);
 
   return (
     <div
@@ -15,11 +15,12 @@ const App = () => {
         padding: '10px',
         textAlign: 'center',
         backgroundColor: 'cyan',
-      }}>
-        <h1>리액트 애플리케이션!</h1>
-        <div ref={ ref }/>
+      }}
+    >
+      <h1>This is a React App!</h1>
+      <div ref={ref} />
     </div>
   );
-}
+};
 
 export default App;

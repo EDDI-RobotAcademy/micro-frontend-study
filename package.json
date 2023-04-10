@@ -1,14 +1,17 @@
 {
   "name": "module-federation",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "react-module-app"
+    ]
+  },
   "scripts": {
     "start": "lerna run --parallel start",
     "build": "lerna run build"
   },
   "devDependencies": {
+    "external-remotes-plugin": "^1.0.0",
     "lerna": "^6.6.1"
   }
 }
