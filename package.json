@@ -1,0 +1,14 @@
+{
+  "name": "module-federation",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^6.6.1"
+  }
+}
